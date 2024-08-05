@@ -1,5 +1,13 @@
+var url= window.location.href
+var swLocation = '/twitto/sw.js'
+
+
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/sw.js");
+ if(url.charAt.includes('localhost')){
+  swLocation='/sw.js'
+ }
+
+  navigator.serviceWorker.register(swLocation);
 }
 
 // Referencias de jQuery
